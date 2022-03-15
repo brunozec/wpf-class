@@ -39,7 +39,6 @@ namespace NotesApp.View
             var currentCulture = (from r in SpeechRecognitionEngine.InstalledRecognizers()
                                  where r.Culture.Equals(Thread.CurrentThread.CurrentCulture)
                                  select r).FirstOrDefault();
-
             recognizer = new SpeechRecognitionEngine(currentCulture);
 
             GrammarBuilder builder = new GrammarBuilder();
